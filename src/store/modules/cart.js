@@ -7,10 +7,10 @@
  * God help those who help themselves
  */
 export default {
-    amespaced: true,
-    state: () => {
-        return {
-            list: []
-        }
+  amespaced: true,
+  state: () => {
+    return {
+      list: []
     }
+  }
 }

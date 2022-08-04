@@ -7,11 +7,11 @@
  * God help those who help themselves
  */
 export default {
-    namespaced: true,
-    state() {
-        return {
-            // 分类信息集合
-            list: []
-        }
+  namespaced: true,
+  state () {
+    return {
+      // 分类信息集合
+      list: []
     }
+  }
 }

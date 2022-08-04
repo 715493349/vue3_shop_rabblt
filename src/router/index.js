@@ -10,7 +10,17 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
-
+  // 一级路由布局容器
+  {
+    path: '/',
+    component: () =>
+      import('@/layout/index.vue'),
+    children: [{
+      path: '/',
+      component: () =>
+        import('@/views/home/index.vue')
+    }]
+  }
 ]
 
 // 创建路由实例、路由配置

@@ -7,7 +7,7 @@
  * God help those who help themselves
  */
 import { createStore } from 'vuex'
-import createPersistedState from "vuex-persistedstate";
+import createPersistedState from 'vuex-persistedstate'
 
 import user from './modules/user'
 import cart from './modules/cart'
@@ -17,16 +17,16 @@ import category from './modules/category'
 // vue2：new Vuex.Store({})
 // vue3：createStore({})
 export default createStore({
-    modules: {
-        user,
-        cart,
-        category
-    },
-    // 持久化
-    plugins: [createPersistedState({
-        // 本地存储key:存储数据的键名
-        key: 'erabbit-cient-pc-124-store',
-        // 指定存储模块
-        paths: ['user', 'cart']
-    })],
+  modules: {
+    user,
+    cart,
+    category
+  },
+  // 持久化
+  plugins: [createPersistedState({
+    // 本地存储key:存储数据的键名
+    key: 'erabbit-cient-pc-124-store',
+    // 指定存储模块
+    paths: ['user', 'cart']
+  })]
 })
