@@ -1,29 +1,48 @@
 <!--
  * @Author: luo_h603
  * @Date: 2022-08-04 15:42:43
- * @LastEditTime: 2022-08-04 16:57:45
+ * @LastEditTime: 2022-08-05 14:01:43
  * @LastEditors: luo_h603
  * @Description: 结构布局
  * God help those who help themselves
 -->
 <template>
   <!-- 顶部 -->
-  <nav>顶部内容</nav>
+  <AppNavbar></AppNavbar>
   <!-- 头部 -->
-  <header>头部内容</header>
+  <AppHeader></AppHeader>
   <!-- 中间容器 -->
-  <div class="main">
+  <div class="app-body">
     <!-- 二级路由 -->
     <router-view></router-view>
   </div>
   <!-- 底部 -->
-  <footer>底部内容</footer>
+  <AppFooter></AppFooter>
 </template>
 
 <script>
+import AppNavbar from "@/components/app-navbar.vue";
+import AppHeader from "@/components/app-header.vue";
+import AppFooter from "@/components/app-footer.vue";
+import { useStore } from "vuex";
+
 export default {
   name: "Layout",
+  components: {
+    AppNavbar,
+    AppHeader,
+    AppFooter,
+  },
+  setup() {
+    // 获取分类列表
+    const store = useStore();
+    store.dispatch("category/getList");
+  },
 };
 </script>
 
-<style lang="less" scope></style>
+<style lang="less" scoped>
+.app-body {
+  min-height: 600px;
+}
+</style>

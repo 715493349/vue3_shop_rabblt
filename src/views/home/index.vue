@@ -1,7 +1,7 @@
 <!--
  * @Author: luo_h603
  * @Date: 2022-08-04 15:40:12
- * @LastEditTime: 2022-08-04 16:59:54
+ * @LastEditTime: 2022-08-04 18:56:54
  * @LastEditors: luo_h603
  * @Description: home主页
  * God help those who help themselves
@@ -16,7 +16,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .container {
   .hoverShadow();
   color: @xtxColor;
